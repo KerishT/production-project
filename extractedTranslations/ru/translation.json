@@ -1,6 +1,8 @@
 {
+  "Korotkiy-yazik": "Korotkiy-yazik",
   "Obnovit stranicu": "Obnovit stranicu",
   "Proizoshla oshibka": "Proizoshla oshibka",
+  "korotkiy-yazik": "korotkiy-yazik",
   "stranica-ne-naidena": "stranica-ne-naidena",
   "Главная": "",
   "Загрузка": {
@@ -10,6 +12,7 @@
       }
     }
   },
+  "Короткий": "Короткий",
   "О нас": "",
   "О сайте": "",
   "Переключить": "",
