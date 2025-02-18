@@ -24,10 +24,10 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 
     return (
         <div
-            data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
                 className,
             ])}
+            data-testid="sidebar"
         >
             <Button
                 className={classNames(cls.collapseBtn)}
