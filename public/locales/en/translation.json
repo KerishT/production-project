@@ -11,5 +11,8 @@
   "korotkiy-yazik": "En",
   "voiti": "Sign in",
   "Vvedite username": "Enter username",
-  "Vvedite parol": "Enter password"
+  "Vvedite parol": "Enter password",
+  "forma-aftorizacii": "Authorization form",
+  "Vi-vveli-neverniy-login-ili-parol": "You entered an incorrect login or password.",
+  "viyti": "Logout"
 }
