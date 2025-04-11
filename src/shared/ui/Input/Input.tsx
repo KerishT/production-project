@@ -3,7 +3,7 @@ import {
     useState, useEffect,
     useRef,
 } from 'react';
-import { classNames } from 'shared/lib/helpers/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>

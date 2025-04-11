@@ -1,9 +1,9 @@
-import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
 
