@@ -37,9 +37,11 @@ module.exports = {
         'react-hooks/rules-of-hooks': 2,
         'react-hooks/exhaustive-deps': 2,
         'no-param-reassign': 0,
+        'no-undef': 0,
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
     },
     overrides: [
         {
