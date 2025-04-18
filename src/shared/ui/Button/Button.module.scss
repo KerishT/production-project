@@ -20,6 +20,11 @@
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     background: none;
+
+    &_red {
+        border: 1px solid var(--red-light);
+        color: var(--red-light);
+    }
 }
 
 .background {
