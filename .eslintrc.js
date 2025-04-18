@@ -38,6 +38,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 2,
         'no-param-reassign': 0,
         'no-undef': 0,
+        'comma-dangle': 0,
     },
     globals: {
         __IS_DEV__: true,

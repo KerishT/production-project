@@ -31,5 +31,10 @@
   "vvedite-imya-polzovatelya": "Введите имя пользователя",
   "vvedite-ssilky-na-avatar": "Введите ссылку на аватар",
   "ukazhite-valutu": "Укажите валюту",
-  "ukazhite-stranu": "Укажите страну"
+  "ukazhite-stranu": "Укажите страну",
+  "dannie-ne-ukazani": "Данные не указаны",
+  "servernaya-oshibka-pri-sohranenii": "Серверная ошибка при сохранении",
+  "imya-i-vozrast-obyazatelni": "Имя и возраст обязательны",
+  "nekorretnaz-region": "Некорректный регион",
+  "nekorretniy-vozrast": "Некорректный возраст"
 }

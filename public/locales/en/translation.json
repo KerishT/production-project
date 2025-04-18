@@ -31,5 +31,10 @@
   "vvedite-imya-polzovatelya": "Enter username",
   "vvedite-ssilky-na-avatar": "Enter avatar link",
   "ukazhite-valutu": "Enter currency",
-  "ukazhite-stranu": "Enter country"
+  "ukazhite-stranu": "Enter country",
+  "dannie-ne-ukazani": "Data not specified",
+  "servernaya-oshibka-pri-sohranenii": "Server error on saving",
+  "imya-i-vozrast-obyazatelni": "Name and age required",
+  "nekorretnaz-region": "Incorrect region",
+  "nekorretniy-vozrast": "Incorrect age"
 }
