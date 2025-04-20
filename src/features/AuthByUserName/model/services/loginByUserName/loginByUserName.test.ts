@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { loginByUserName } from './loginByUserName';
@@ -21,7 +20,7 @@ describe('loginByUserName.test', () => {
     test('err or login', async () => {
         const thunk = new TestAsyncThunk(loginByUserName);
 
-        thunk.api.post.mockReturnValue(Promise.resolve({ staus: 403 }));
+        thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk({ username: 'admin', password: '123' });
 
         expect(thunk.api.post).toHaveBeenCalled();
