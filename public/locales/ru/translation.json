@@ -36,5 +36,9 @@
   "servernaya-oshibka-pri-sohranenii": "Серверная ошибка при сохранении",
   "imya-i-vozrast-obyazatelni": "Имя и возраст обязательны",
   "nekorretnaz-region": "Некорректный регион",
-  "nekorretniy-vozrast": "Некорректный возраст"
+  "nekorretniy-vozrast": "Некорректный возраст",
+  "article-details": "Подробности статьи",
+  "articles-page": "Страница статей",
+  "Профиль": "Профиль",
+  "Статьи": "Статьи"
 }

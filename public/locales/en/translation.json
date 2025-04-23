@@ -36,5 +36,9 @@
   "servernaya-oshibka-pri-sohranenii": "Server error on saving",
   "imya-i-vozrast-obyazatelni": "Name and age required",
   "nekorretnaz-region": "Incorrect region",
-  "nekorretniy-vozrast": "Incorrect age"
+  "nekorretniy-vozrast": "Incorrect age",
+  "article-details": "Article Details",
+  "articles-page": "Articles Page",
+  "Профиль": "Profile",
+  "Статьи": "Articles"
 }
