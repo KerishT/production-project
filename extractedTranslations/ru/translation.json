@@ -1,4 +1,5 @@
 {
+  "": "",
   "00000000": "00000000",
   "Korotkiy-yazik": "Korotkiy-yazik",
   "Obnovit stranicu": "Obnovit stranicu",
@@ -24,9 +25,15 @@
   "profile": "profile",
   "proizoshla-oshibka": "proizoshla-oshibka",
   "proizoshla-oshibka-pri-zagruzke-profilya": "proizoshla-oshibka-pri-zagruzke-profilya",
+  "proizoshla-oshibka-pri-zagruzke-statyi": "proizoshla-oshibka-pri-zagruzke-statyi",
+  "proizoshla-oshibka-pri-zagruzki-statyi": "proizoshla-oshibka-pri-zagruzki-statyi",
+  "proizoshla-oshibka-pri-zagruzkе-statyi": "proizoshla-oshibka-pri-zagruzkе-statyi",
+  "proizoshla-oshibka-pri-zagruzkу-statyi": "proizoshla-oshibka-pri-zagruzkу-statyi",
+  "proizoshla-osibka": "proizoshla-osibka",
   "redaktirovat": "redaktirovat",
   "servernaya-oshibka-pri-sohranenii": "servernaya-oshibka-pri-sohranenii",
   "sohranit": "sohranit",
+  "statya-ne-naidena": "statya-ne-naidena",
   "stranica-ne-naidena": "stranica-ne-naidena",
   "ukazhite-stranu": "ukazhite-stranu",
   "ukazhite-valutu": "ukazhite-valutu",
@@ -52,5 +59,6 @@
   "О нас": "",
   "О сайте": "",
   "Переключить": "",
+  "Произошла ошибка": "Произошла ошибка",
   "Язык": ""
 }

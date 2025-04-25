@@ -40,5 +40,8 @@
   "article-details": "Подробности статьи",
   "articles-page": "Страница статей",
   "Профиль": "Профиль",
-  "Статьи": "Статьи"
+  "Статьи": "Статьи",
+  "statya-ne-naidena": "Статья не найдена",
+  "proizoshla-oshibka-pri-zagruzki-statyi": "Произошла ошибка при загрузке ст",
+  "proizoshla-oshibka-pri-zagruzke-statyi": "Произошла ошибка при загрузке статьи"
 }

@@ -40,5 +40,7 @@
   "article-details": "Article Details",
   "articles-page": "Articles Page",
   "Профиль": "Profile",
-  "Статьи": "Articles"
+  "Статьи": "Articles",
+  "statya-ne-naidena": "Article not found",
+  "proizoshla-oshibka-pri-zagruzke-statyi": "Occurred due to an error in including the article"
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from 'shared/assets/icons/theme-dark.svg';
+import Icon from 'shared/assets/icons/svg-icon.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 export interface SidebarItemType {
