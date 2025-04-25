@@ -4,6 +4,11 @@
 @import "themes/normal";
 @import "themes/orange";
 
+@font-face {
+    font-family: Consolas;
+    src: url("../assets/fonts/Consolas.ttf") format("truetype");
+}
+
 .app,
 .app_modal {
     font: var(--font-m);

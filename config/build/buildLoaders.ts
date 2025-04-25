@@ -26,5 +26,13 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
 
     const svgLoader = buildSvgLoader();
 
-    return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader];
+    const fontLoader = {
+        test: /\.(woff2?|ttf|otf|eot)$/,
+        type: 'asset/resource',
+        generator: {
+            filename: 'fonts/[name][ext]'
+        }
+    };
+
+    return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader, fontLoader];
 }
