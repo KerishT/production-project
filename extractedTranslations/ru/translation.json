@@ -9,10 +9,14 @@
   "Vvedite username": "Vvedite username",
   "article-details": "article-details",
   "articles-page": "articles-page",
+  "avatar": "avatar",
   "dannie-ne-ukazani": "dannie-ne-ukazani",
   "forma-aftorizacii": "forma-aftorizacii",
   "gorod": "gorod",
   "imya-i-vozrast-obyazatelni": "imya-i-vozrast-obyazatelni",
+  "izobragenie": "izobragenie",
+  "kommentarii": "kommentarii",
+  "kommentarii-otsutstvuyut": "kommentarii-otsutstvuyut",
   "korotkiy-yazik": "korotkiy-yazik",
   "nekorretnaz-region": "nekorretnaz-region",
   "nekorretnaz-strana": "nekorretnaz-strana",
@@ -55,6 +59,7 @@
       }
     }
   },
+  "Комментарии отсутствуют": "Комментарии отсутствуют",
   "Короткий": "Короткий",
   "О нас": "",
   "О сайте": "",

@@ -42,5 +42,9 @@
   "Профиль": "Profile",
   "Статьи": "Articles",
   "statya-ne-naidena": "Article not found",
-  "proizoshla-oshibka-pri-zagruzke-statyi": "Occurred due to an error in including the article"
+  "proizoshla-oshibka-pri-zagruzke-statyi": "Occurred due to an error in including the article",
+  "kommentarii": "Comments",
+  "kommentarii-otsutstvuyut": "No comments",
+  "avatar": "Avatar",
+  "izobragenie": "Image"
 }

@@ -6,7 +6,7 @@ interface AvatarProps {
     className?: string
     src?: string
     size?: number
-    alt?: string
+    alt: string
 }
 
 export const Avatar: FC<AvatarProps> = ({
