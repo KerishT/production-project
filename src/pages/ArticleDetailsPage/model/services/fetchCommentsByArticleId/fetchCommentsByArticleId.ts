@@ -3,7 +3,7 @@ import { ThunkConfig } from 'app/providers/StoreProvider';
 import { Comment } from 'entities/Comment';
 
 export const fetchCommentsByArticleId = createAsyncThunk<Comment[], string | undefined, ThunkConfig<string>>(
-    'profile/fetchCommentsByArticleId',
+    'articleDeatils/fetchCommentsByArticleId',
     async (articleId, thunkAPI) => {
         const { extra, rejectWithValue } = thunkAPI;
 

@@ -1,6 +1,6 @@
 import { ArticleDetails } from 'entities/Article';
 import { CommentList } from 'entities/Comment';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -10,6 +10,8 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { fetchCommentsByArticleId } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { AddCommentForm } from 'features/AddCommentForm';
+import { addCommentForArticle } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { articleDetailsCommentsReducer, getArticleDetailsComments } from '../../model/slice/articleDetailsCommentsSlice';
 import cls from './ArtricleDetailsPage.module.scss';
@@ -34,6 +36,10 @@ const ArtricleDetailsPage = (props: ArtricleDetailsPageProps) => {
         dispatch(fetchCommentsByArticleId(id));
     });
 
+    const onSendComment = useCallback((text: string) => {
+        dispatch(addCommentForArticle(text));
+    }, [dispatch]);
+
     if (!id) {
         return (
             <div className={classNames(cls.ArtricleDetailsPage, {}, [className])}>
@@ -48,6 +54,8 @@ const ArtricleDetailsPage = (props: ArtricleDetailsPageProps) => {
                 <ArticleDetails id={id} />
 
                 <Text title={`${t('kommentarii')}:`} className={cls.commentsTitle} />
+
+                <AddCommentForm onSendComment={onSendComment} />
 
                 <CommentList
                     comments={comments}

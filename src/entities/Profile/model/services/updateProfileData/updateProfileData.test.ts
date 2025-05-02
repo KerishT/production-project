@@ -5,7 +5,8 @@ import { ValidateProfileError } from '../../types/profile';
 import { updateProfileData } from './updateProfileData';
 
 const data = {
-    first: 'Тиму р',
+    id: '1',
+    first: 'Тимур',
     lastname: 'Ульби',
     age: 22,
     currency: Currency.EUR,
