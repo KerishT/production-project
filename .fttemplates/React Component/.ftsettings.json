@@ -1,0 +1,6 @@
+{
+  "customVariables": ["slice=>shared"],
+  "openFilesWhenDone": [
+      "[FTName].tsx"
+  ]
+}
