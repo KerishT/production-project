@@ -2,21 +2,23 @@ import { ArticleDetails } from 'entities/Article';
 import { CommentList } from 'entities/Comment';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynammicModuleLoader/DynamicModuleLoader';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { fetchCommentsByArticleId } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { AddCommentForm } from 'features/AddCommentForm';
-import { addCommentForArticle } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
+import { Button } from 'shared/ui/Button/Button';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { articleDetailsCommentsReducer, getArticleDetailsComments } from '../../model/slice/articleDetailsCommentsSlice';
-import cls from './ArtricleDetailsPage.module.scss';
+import cls from './ArticleDetailsPage.module.scss';
 
-interface ArtricleDetailsPageProps {
+interface ArticleDetailsPageProps {
     className?: string
 }
 
@@ -24,10 +26,11 @@ const reducers: ReducersList = {
     articleDetailsComments: articleDetailsCommentsReducer,
 };
 
-const ArtricleDetailsPage = (props: ArtricleDetailsPageProps) => {
+const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { className } = props;
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
     const { id } = useParams<{id: string}>();
     const comments = useSelector(getArticleDetailsComments.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
@@ -40,9 +43,13 @@ const ArtricleDetailsPage = (props: ArtricleDetailsPageProps) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
 
+    const onBackToList = useCallback(() => {
+        navigate(RoutePath.articles);
+    }, [navigate]);
+
     if (!id) {
         return (
-            <div className={classNames(cls.ArtricleDetailsPage, {}, [className])}>
+            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 { t('statya-ne-naidena')}
             </div>
         );
@@ -50,7 +57,11 @@ const ArtricleDetailsPage = (props: ArtricleDetailsPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArtricleDetailsPage, {}, [className])}>
+            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+                <Button onClick={onBackToList}>
+                    {t('Back to list')}
+                </Button>
+
                 <ArticleDetails id={id} />
 
                 <Text title={`${t('kommentarii')}:`} className={cls.commentsTitle} />
@@ -66,4 +77,4 @@ const ArtricleDetailsPage = (props: ArtricleDetailsPageProps) => {
     );
 };
 
-export default memo(ArtricleDetailsPage);
+export default memo(ArticleDetailsPage);

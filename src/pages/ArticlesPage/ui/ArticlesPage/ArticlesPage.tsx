@@ -1,18 +1,13 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ArtricleDetailsPage from './ArtricleDetailsPage';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Article, ArticleList } from 'entities/Article';
+import { ArticleType, ArticleBlockType, ArticleView } from 'entities/Article/model/types/article';
+import cls from './ArticlesPage.module.scss';
 
-export default {
-    title: 'pages/ArtricleDetailsPage',
-    component: ArtricleDetailsPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArtricleDetailsPage>;
-
-const Template: ComponentStory<typeof ArtricleDetailsPage> = (args) => <ArtricleDetailsPage {...args} />;
+interface ArticlesPageProps {
+    className?: string
+}
 
 const article: Article = {
     id: '1',
@@ -21,6 +16,11 @@ const article: Article = {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
+    user: {
+        id: '1',
+        username: 'admin',
+        avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg'
+    },
     type: [ArticleType.IT],
     blocks: [
         {
@@ -47,12 +47,23 @@ const article: Article = {
     ]
 };
 
-export const Normal = Template.bind({});
-Normal.args = {};
-Normal.decorators = [
-    StoreDecorator({
-        articleDetails: {
-            data: article
-        }
-    })
-];
+const ArticlesPage = (props: ArticlesPageProps) => {
+    const { className } = props;
+    const { t } = useTranslation();
+
+    return (
+        <div className={classNames(cls.ArtriclesPage, {}, [className])}>
+            <ArticleList
+                isLoading
+                view={ArticleView.SMALL}
+                articles={
+                    new Array(16)
+                        .fill(0)
+                        .map((_, i) => ({ ...article, id: String(i) }))
+                }
+            />
+        </div>
+    );
+};
+
+export default memo(ArticlesPage);
