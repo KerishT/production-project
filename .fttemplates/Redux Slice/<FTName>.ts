@@ -8,5 +8,7 @@ export const <FTName> = createSlice({
     reducers: {}
 });
 
-export const { actions: <FTName | replace('Slice', '')>Actions } = <FTName>;
-export const { reducer: <FTName | replace('Slice', '')>Reducer } = <FTName>;
+export const {
+    reducer: <FTName | replace('Slice', '')>Reducer,
+    actions: <FTName | replace('Slice', '')>Actions
+} = articlesPageSlice;

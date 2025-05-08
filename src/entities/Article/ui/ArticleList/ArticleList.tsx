@@ -12,7 +12,7 @@ interface ArticleListProps {
     view?: ArticleView
 }
 
-const getScletons = (view: ArticleView) => (new Array(view === ArticleView.SMALL ? 9 : 3)
+const getScletons = (view: ArticleView) => (new Array(view === ArticleView.SMALL ? 8 : 2)
     .fill(0)
     .map((item, index) => (
         <ArticleListItemSkeleton key={index} view={view} />
