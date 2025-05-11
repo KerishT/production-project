@@ -12,7 +12,7 @@ interface ArticleListProps {
     view?: ArticleView
 }
 
-const getScletons = (view: ArticleView) => (new Array(view === ArticleView.SMALL ? 8 : 2)
+const getScletons = (view: ArticleView) => (new Array(view === ArticleView.BIG ? 4 : 12)
     .fill(0)
     .map((item, index) => (
         <ArticleListItemSkeleton key={index} view={view} />
@@ -25,14 +25,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
         isLoading,
         view = ArticleView.SMALL
     } = props;
-
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {getScletons(view)}
-            </div>
-        );
-    }
 
     const renderArticle = (article: Article) => (
         <ArticleListItem
@@ -48,6 +40,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
             {articles.length > 0
                 ? articles.map(renderArticle)
                 : null}
+
+            {isLoading && getScletons(view)}
         </div>
     );
 });

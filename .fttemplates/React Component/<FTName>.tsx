@@ -12,6 +12,6 @@ export const <FTName> = memo((props: <FTName>Props) => {
     const { t } = useTranslation();
 
     return (
-        <div className={classNames(cls.<FTName>, {}, [className])}></div>
+        <div className={classNames(cls.<FTName>, {}, [className])}><FTName></div>
     );
 });
