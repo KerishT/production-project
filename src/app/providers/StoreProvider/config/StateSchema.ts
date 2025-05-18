@@ -8,19 +8,21 @@ import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUserName';
+import { UISchema } from 'features/UI';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 
 export interface StateSchema {
     counter: CounterSchema,
-    user: UserSchema
+    user: UserSchema,
+    ui: UISchema,
 
     // asyncReducers
-    loginForm?: LoginSchema
-    profile?: ProfileSchema
-    articleDetails?: ArticleDetailsSchema
-    articleDetailsComments?: ArticleDetailsCommentsSchema
-    addCommentForm?: AddCommentFormSchema
+    loginForm?: LoginSchema,
+    profile?: ProfileSchema,
+    articleDetails?: ArticleDetailsSchema,
+    articleDetailsComments?: ArticleDetailsCommentsSchema,
+    addCommentForm?: AddCommentFormSchema,
     articlesPage?: ArticlesPageSchema
 }
 

@@ -11,4 +11,4 @@ export const <FTName> = createSlice({
 export const {
     reducer: <FTName | replace('Slice', '')>Reducer,
     actions: <FTName | replace('Slice', '')>Actions
-} = articlesPageSlice;
+} = <FTName>;
