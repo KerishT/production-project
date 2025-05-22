@@ -50,5 +50,18 @@
   "Enter the text of the comment": "Enter the text of the comment",
   "Send": "Send",
   "Read more": "Read more",
-  "Back to list": "Back to list"
+  "Back to list": "Back to list",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "ascending": "ascending",
+  "descending": "descending",
+  "by": "by",
+  "date of creation": "date of creation",
+  "title": "title",
+  "views": "views",
+  "All": "All",
+  "IT": "IT",
+  "Science": "Science",
+  "Economics": "Economics",
+  "No articles found": "No articles found"
 }
