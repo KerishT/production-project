@@ -541,6 +541,12 @@
       "userId": "1",
       "text": "Some comment 100",
       "id": "KuBtmF3"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "123",
+      "id": "faaWvFs"
     }
   ],
   "users": [

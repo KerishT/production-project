@@ -6,6 +6,6 @@ export function useInitialEffect(callback: () => void) {
             callback();
         }
 
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 }
