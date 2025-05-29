@@ -13,7 +13,13 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
+        'react-hooks',
+        'kerish-plugin',
+    ],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -46,6 +52,7 @@ module.exports = {
         'no-undef': 0,
         'comma-dangle': 0,
         'react/no-array-index-key': 0,
+        'kerish-plugin/path-checker': 2,
     },
     globals: {
         __IS_DEV__: true,

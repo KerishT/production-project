@@ -1,8 +1,8 @@
-import { Currency } from 'entities/Currency/model/types/currency';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Select } from 'shared/ui/Select/Select';
+import { Currency } from '../../model/types/currency';
 
 const options = [
     { value: Currency.RUB, content: Currency.RUB },
