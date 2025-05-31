@@ -1,7 +1,7 @@
 import {
     ChangeEvent, InputHTMLAttributes, memo,
     useState, useEffect,
-    useRef,
+    useRef
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
@@ -68,7 +68,7 @@ export const Input = memo((props: InputProps) => {
     }, [autofocus]);
 
     const mods: Mods = {
-        [cls.readonly]: readonly,
+        [cls.readonly]: readonly
     };
 
     return (

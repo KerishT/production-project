@@ -1,6 +1,6 @@
 import { LoginModal } from 'features/AuthByUserName';
 import {
-    memo, useCallback, useState,
+    memo, useCallback, useState
 } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';

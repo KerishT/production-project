@@ -38,8 +38,8 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
             this.getState,
             {
                 api: this.api,
-                navigate: this.navigate,
-            },
+                navigate: this.navigate
+            }
         );
 
         return result;

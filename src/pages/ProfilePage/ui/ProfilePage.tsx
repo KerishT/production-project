@@ -10,7 +10,7 @@ import {
     profileActions,
     ProfileCard,
     profileReducer,
-    ValidateProfileError,
+    ValidateProfileError
 } from 'entities/Profile';
 import { t } from 'i18next';
 import { useSelector } from 'react-redux';
@@ -25,7 +25,7 @@ import { VStack } from 'shared/ui/Stack';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
-    profile: profileReducer,
+    profile: profileReducer
 };
 
 interface ProfilePageProps {
@@ -47,7 +47,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         [ValidateProfileError.INCORRECT_COUNTRY]: t('nekorretnaz-region'),
         [ValidateProfileError.INCORRECT_USER_DATA]: t('imya-i-vozrast-obyazatelni'),
         [ValidateProfileError.SERVER_ERROR]: t('servernaya-oshibka-pri-sohranenii'),
-        [ValidateProfileError.NO_DATA]: t('dannie-ne-ukazani'),
+        [ValidateProfileError.NO_DATA]: t('dannie-ne-ukazani')
     };
 
     const onChangeFirstname = (value?: string) => {

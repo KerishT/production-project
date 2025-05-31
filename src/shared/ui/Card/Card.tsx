@@ -4,7 +4,7 @@ import cls from './Card.module.scss';
 
 export enum CardTheme {
     NORMAL = 'normal',
-    OUTLINED = 'outlined',
+    OUTLINED = 'outlined'
 }
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {

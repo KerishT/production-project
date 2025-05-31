@@ -14,23 +14,23 @@ export function buildPlugins({
 }: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins = [
         new HTMLWebpackPlugin({
-            template: paths.html,
+            template: paths.html
         }),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
-            chunkFilename: 'css/[name].[contenthash:8].css',
+            chunkFilename: 'css/[name].[contenthash:8].css'
         }),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
             __API__: JSON.stringify(apiUrl),
-            __PROJECT__: JSON.stringify(project),
+            __PROJECT__: JSON.stringify(project)
         }),
         new CopyPlugin({
             patterns: [
-                { from: paths.locales, to: paths.buildLocales },
-            ],
-        }),
+                { from: paths.locales, to: paths.buildLocales }
+            ]
+        })
     ];
 
     if (isDev) {

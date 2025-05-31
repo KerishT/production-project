@@ -38,5 +38,5 @@ export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkCon
 
             dispatch(fetchArticlesList({}));
         }
-    },
+    }
 );

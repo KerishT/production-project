@@ -11,7 +11,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
         locales: path.resolve(__dirname, '..', 'public', 'locales'),
-        buildLocales: path.resolve(__dirname, '..', 'build', 'locales'),
+        buildLocales: path.resolve(__dirname, '..', 'build', 'locales')
     };
 
     config.resolve!.modules!.push(paths.src);
@@ -38,8 +38,8 @@ export default ({ config }: {config: webpack.Configuration}) => {
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(true),
             __API__: JSON.stringify(''),
-            __PROJECT__: JSON.stringify('storybook'),
-        }),
+            __PROJECT__: JSON.stringify('storybook')
+        })
     );
 
     return config;

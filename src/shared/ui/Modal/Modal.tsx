@@ -1,5 +1,5 @@
 import React, {
-    FC, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
+    FC, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
@@ -17,7 +17,7 @@ interface ModalProps {
 const ANIMATION_DELAY = 300;
 
 export const Modal: FC<ModalProps> = ({
-    className, children, isOpen, lazy, onClose,
+    className, children, isOpen, lazy, onClose
 }) => {
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
@@ -64,7 +64,7 @@ export const Modal: FC<ModalProps> = ({
 
     const mods: Mods = {
         [cls.opened]: isOpen,
-        [cls.isClosing]: isClosing,
+        [cls.isClosing]: isClosing
     };
 
     if (lazy && !isMounted) {

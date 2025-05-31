@@ -1,7 +1,7 @@
 import {
     createEntityAdapter,
     createSlice,
-    PayloadAction,
+    PayloadAction
 } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
 import {
@@ -13,11 +13,11 @@ import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
 
 const articlesAdapter = createEntityAdapter<Article>({
-    selectId: (article) => article.id,
+    selectId: (article) => article.id
 });
 
 export const getArticles = articlesAdapter.getSelectors<StateSchema>(
-    (state) => state.articlesPage || articlesAdapter.getInitialState(),
+    (state) => state.articlesPage || articlesAdapter.getInitialState()
 );
 
 const articlesPageSlice = createSlice({
@@ -36,7 +36,7 @@ const articlesPageSlice = createSlice({
             order: 'asc',
             search: '',
             type: ArticleType.ALL,
-            _inited: false,
+            _inited: false
         }
     ),
     reducers: {

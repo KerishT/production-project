@@ -6,8 +6,8 @@ describe('getProfileValidateErrors.test', () => {
     test('should return validateErrors', () => {
         const state: DeepPartial<StateSchema> = {
             profile: {
-                validateErrors: [ValidateProfileError.SERVER_ERROR],
-            },
+                validateErrors: [ValidateProfileError.SERVER_ERROR]
+            }
         };
 
         expect(getProfileValidateErrors(state as StateSchema)).toEqual([ValidateProfileError.SERVER_ERROR]);

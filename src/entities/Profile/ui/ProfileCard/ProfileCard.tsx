@@ -42,7 +42,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeAvatar,
         onChangeUsername,
         onChangeCurrency,
-        onChangeCountry,
+        onChangeCountry
     } = props;
 
     const { t } = useTranslation();
@@ -77,7 +77,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     }
 
     const mods: Mods = {
-        [cls.editing]: !readonly,
+        [cls.editing]: !readonly
     };
 
     return (

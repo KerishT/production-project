@@ -6,8 +6,8 @@ export default {
     title: 'shared/Tabs',
     component: Tabs,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof Tabs>;
 
 const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
@@ -20,5 +20,5 @@ Normal.args = {
         { value: '3', content: 'tab3' }
     ],
     value: '2',
-    onTabClick: action('onTabClick'),
+    onTabClick: action('onTabClick')
 };

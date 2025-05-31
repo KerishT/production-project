@@ -7,8 +7,8 @@ export default {
     title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof ArticleDetails>;
 
 const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />;
@@ -22,7 +22,7 @@ const article: Article = {
     createdAt: '26.02.2022',
     user: {
         id: '1',
-        username: 'admin',
+        username: 'admin'
     },
     type: [ArticleType.IT],
     blocks: [

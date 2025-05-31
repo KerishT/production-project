@@ -7,59 +7,59 @@ export default {
     title: 'shared/Button',
     component: Button,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-    children: 'Text',
+    children: 'Text'
 };
 
 export const Clear = Template.bind({});
 Clear.args = {
     children: 'Text',
-    theme: ButtonTheme.CLEAR,
+    theme: ButtonTheme.CLEAR
 };
 
 export const clearInverted = Template.bind({});
 clearInverted.args = {
     children: 'Text',
-    theme: ButtonTheme.CLEAR_INVERTED,
+    theme: ButtonTheme.CLEAR_INVERTED
 };
 
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Text',
-    theme: ButtonTheme.OUTLINE,
+    theme: ButtonTheme.OUTLINE
 };
 
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Text',
-    theme: ButtonTheme.OUTLINE,
+    theme: ButtonTheme.OUTLINE
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Background = Template.bind({});
 Background.args = {
     children: 'Text',
-    theme: ButtonTheme.BACKGROUND,
+    theme: ButtonTheme.BACKGROUND
 };
 
 export const BackgroundInverted = Template.bind({});
 BackgroundInverted.args = {
     children: 'Text',
-    theme: ButtonTheme.BACKGROUND_INVERTED,
+    theme: ButtonTheme.BACKGROUND_INVERTED
 };
 
 export const Square = Template.bind({});
 Square.args = {
     children: '>',
     theme: ButtonTheme.BACKGROUND_INVERTED,
-    square: true,
+    square: true
 };
 
 export const SquareSizeL = Template.bind({});
@@ -67,7 +67,7 @@ SquareSizeL.args = {
     children: '>',
     theme: ButtonTheme.BACKGROUND_INVERTED,
     square: true,
-    size: ButtonSize.L,
+    size: ButtonSize.L
 };
 
 export const SquareSizeXL = Template.bind({});
@@ -75,12 +75,12 @@ SquareSizeXL.args = {
     children: '>',
     theme: ButtonTheme.BACKGROUND_INVERTED,
     square: true,
-    size: ButtonSize.XL,
+    size: ButtonSize.XL
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
     children: 'Text',
     theme: ButtonTheme.OUTLINE,
-    disabled: true,
+    disabled: true
 };

@@ -1,5 +1,5 @@
 import {
-    CombinedState, configureStore, Reducer, ReducersMapObject,
+    CombinedState, configureStore, Reducer, ReducersMapObject
 } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
@@ -10,7 +10,7 @@ import { createReducerManager } from './reducerManager';
 
 export function createReduxStore(
     initialStore?: StateSchema,
-    asyncReducers?: ReducersMapObject<StateSchema>,
+    asyncReducers?: ReducersMapObject<StateSchema>
 ) {
     const rootRecucer: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
@@ -22,7 +22,7 @@ export function createReduxStore(
     const reducerManager = createReducerManager(rootRecucer);
 
     const extaArg: ThunkExtraArg = {
-        api: $api,
+        api: $api
     };
 
     const store = configureStore({
@@ -31,9 +31,9 @@ export function createReduxStore(
         preloadedState: initialStore,
         middleware: (getDefaultMiddleware) => getDefaultMiddleware({
             thunk: {
-                extraArgument: extaArg,
-            },
-        }),
+                extraArgument: extaArg
+            }
+        })
     });
 
     // @ts-ignore

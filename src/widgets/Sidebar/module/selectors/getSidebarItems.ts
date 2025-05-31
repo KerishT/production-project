@@ -11,12 +11,12 @@ export const getSidebarItems = createSelector(
             {
                 path: RoutePath.main,
                 text: 'Главная',
-                Icon: SvgIcon,
+                Icon: SvgIcon
             },
             {
                 path: RoutePath.about,
                 text: 'О сайте',
-                Icon: SvgIcon,
+                Icon: SvgIcon
             }
         ];
 
@@ -26,13 +26,13 @@ export const getSidebarItems = createSelector(
                     path: RoutePath.profile + userData.id,
                     text: 'Профиль',
                     Icon: SvgIcon,
-                    authOnly: true,
+                    authOnly: true
                 },
                 {
                     path: RoutePath.articles,
                     text: 'Статьи',
                     Icon: SvgIcon,
-                    authOnly: true,
+                    authOnly: true
                 }
             );
         }

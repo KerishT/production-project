@@ -43,7 +43,7 @@ export const fetchArticlesList = createAsyncThunk<Article[], fetchArticlesListPr
                     _order: order,
                     q: search,
                     type: type === ArticleType.ALL ? undefined : type
-                },
+                }
             });
 
             getQueryParams({ _sort: sort });
@@ -58,5 +58,5 @@ export const fetchArticlesList = createAsyncThunk<Article[], fetchArticlesListPr
 
             return rejectWithValue('error');
         }
-    },
+    }
 );

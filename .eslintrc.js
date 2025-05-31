@@ -2,23 +2,23 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
-        jest: true,
+        jest: true
     },
     extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
-            jsx: true,
+            jsx: true
         },
         ecmaVersion: 'latest',
-        sourceType: 'module',
+        sourceType: 'module'
     },
     plugins: [
         'react',
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'kerish-plugin',
+        'kerish-plugin'
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -63,28 +63,38 @@ module.exports = {
         '@typescript-eslint/member-delimiter-style': [2, {
             multiline: {
                 delimiter: 'comma',
-                requireLast: false,
+                requireLast: false
             },
             singleline: {
                 delimiter: 'comma',
-                requireLast: false,
-            },
+                requireLast: false
+            }
+        }],
+        '@typescript-eslint/comma-dangle': [2, {
+            arrays: 'never',
+            objects: 'never',
+            imports: 'never',
+            exports: 'never',
+            functions: 'never',
+            enums: 'never',
+            generics: 'never',
+            tuples: 'never'
         }],
         'react/no-array-index-key': 0,
-        'kerish-plugin/path-checker': 2,
+        'kerish-plugin/path-checker': 2
     },
     globals: {
         __IS_DEV__: true,
         __API__: true,
-        __PROJECT__: true,
+        __PROJECT__: true
     },
     overrides: [
         {
             files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 0,
-                'max-len': 0,
-            },
-        },
-    ],
+                'max-len': 0
+            }
+        }
+    ]
 };

@@ -10,11 +10,11 @@ interface AvatarProps {
 }
 
 export const Avatar: FC<AvatarProps> = ({
-    className, src, size, alt,
+    className, src, size, alt
 }) => {
     const styles = useMemo<CSSProperties>(() => ({
         width: size || 100,
-        height: size || 100,
+        height: size || 100
     }), [size]);
 
     return (

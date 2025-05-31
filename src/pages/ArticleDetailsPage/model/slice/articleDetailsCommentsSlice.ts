@@ -1,7 +1,7 @@
 import {
     createEntityAdapter,
     createSlice,
-    PayloadAction,
+    PayloadAction
 } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { Comment } from 'entities/Comment';
@@ -9,11 +9,11 @@ import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSch
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 
 const commentsAdapter = createEntityAdapter<Comment>({
-    selectId: (comment) => comment.id,
+    selectId: (comment) => comment.id
 });
 
 export const getArticleDetailsComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState(),
+    (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState()
 );
 
 const articleDetailsCommentsSlice = createSlice({
@@ -23,7 +23,7 @@ const articleDetailsCommentsSlice = createSlice({
             isLoading: false,
             error: undefined,
             ids: [],
-            entities: {},
+            entities: {}
         }
     ),
     reducers: {},

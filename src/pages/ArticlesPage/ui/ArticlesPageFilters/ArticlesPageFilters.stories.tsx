@@ -5,8 +5,8 @@ export default {
     title: 'pages/Articles/ArticlesPageFilters',
     component: ArticlesPageFilters,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof ArticlesPageFilters>;
 
 const Template: ComponentStory<typeof ArticlesPageFilters> = (args) => <ArticlesPageFilters {...args} />;

@@ -23,7 +23,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
         options,
         value,
         disabled,
-        onChange,
+        onChange
     } = props;
 
     const optionsList = useMemo(() => options?.map((opt) => (
@@ -41,7 +41,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
     };
 
     const mods: Mods = {
-        [cls.disabled]: disabled,
+        [cls.disabled]: disabled
     };
 
     return (

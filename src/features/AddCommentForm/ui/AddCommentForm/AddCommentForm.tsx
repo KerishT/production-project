@@ -12,7 +12,7 @@ import { getAddCommentFormError, getAddCommentFormText } from '../../model/selec
 import cls from './AddCommentForm.module.scss';
 
 const reducers: ReducersList = {
-    addCommentForm: addCommentFormReducer,
+    addCommentForm: addCommentFormReducer
 };
 
 export interface AddCommentFormProps {

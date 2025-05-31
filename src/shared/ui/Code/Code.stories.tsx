@@ -5,8 +5,8 @@ export default {
     title: 'shared/Code',
     component: Code,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof Code>;
 
 const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;

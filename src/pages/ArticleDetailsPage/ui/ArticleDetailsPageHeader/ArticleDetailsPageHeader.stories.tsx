@@ -5,8 +5,8 @@ export default {
     title: 'pages/Articles/ArticleDetailsPageHeader',
     component: ArticleDetailsPageHeader,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof ArticleDetailsPageHeader>;
 
 const Template: ComponentStory<typeof ArticleDetailsPageHeader> = (args) => <ArticleDetailsPageHeader {...args} />;

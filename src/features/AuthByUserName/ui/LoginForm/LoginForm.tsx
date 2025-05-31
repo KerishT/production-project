@@ -21,7 +21,7 @@ export interface LoginFormProps {
 }
 
 const initialReducers: ReducersList = {
-    loginForm: loginReducer,
+    loginForm: loginReducer
 };
 
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {

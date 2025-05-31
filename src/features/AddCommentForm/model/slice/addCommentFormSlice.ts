@@ -3,7 +3,7 @@ import { AddCommentFormSchema } from '../types/addCommentForm';
 
 const initialState: AddCommentFormSchema = {
     text: '',
-    error: undefined,
+    error: undefined
 };
 
 export const addCommentFormSlice = createSlice({
@@ -13,7 +13,7 @@ export const addCommentFormSlice = createSlice({
         setText: (state, action: PayloadAction<string>) => {
             state.text = action.payload;
         }
-    },
+    }
     // extraReducers(builder) {
     //     builder
     //         .addCase(loginByUserName.pending, (state) => {

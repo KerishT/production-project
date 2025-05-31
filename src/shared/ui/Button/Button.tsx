@@ -1,5 +1,5 @@
 import {
-    ButtonHTMLAttributes, memo, ReactNode,
+    ButtonHTMLAttributes, memo, ReactNode
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
@@ -39,7 +39,7 @@ export const Button = memo(({
 }: ButtonProps) => {
     const mods: Mods = {
         [cls.square]: square,
-        [cls.disabled]: disabled,
+        [cls.disabled]: disabled
     };
 
     return (

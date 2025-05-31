@@ -8,11 +8,11 @@ import { fetchArticleRecommendations } from '../services/fetchArticleRecommendat
 import { ArticleDetailsRecommendationsSchema } from '../types/ArticleDetailsRecommendationsSchema';
 
 const recommendationssAdapter = createEntityAdapter<Article>({
-    selectId: (article) => article.id,
+    selectId: (article) => article.id
 });
 
 export const getArticleDetailsRecomendations = recommendationssAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsPage?.recommendations || recommendationssAdapter.getInitialState(),
+    (state) => state.articleDetailsPage?.recommendations || recommendationssAdapter.getInitialState()
 );
 
 const articleDetailsRecommendationsSlice = createSlice({
@@ -22,7 +22,7 @@ const articleDetailsRecommendationsSlice = createSlice({
             isLoading: false,
             error: undefined,
             ids: [],
-            entities: {},
+            entities: {}
         }
     ),
     reducers: {},

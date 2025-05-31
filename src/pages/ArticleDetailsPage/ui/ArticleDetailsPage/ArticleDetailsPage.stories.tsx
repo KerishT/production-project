@@ -8,8 +8,8 @@ export default {
     title: 'pages/Articles/ArticleDetailsPage',
     component: ArticleDetailsPage,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof ArticleDetailsPage>;
 
 const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
@@ -23,7 +23,7 @@ const article: Article = {
     createdAt: '26.02.2022',
     user: {
         id: '1',
-        username: 'admin',
+        username: 'admin'
     },
     type: [ArticleType.IT],
     blocks: [

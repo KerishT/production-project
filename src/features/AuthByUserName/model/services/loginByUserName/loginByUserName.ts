@@ -29,5 +29,5 @@ export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, Thun
 
             return rejectWithValue('error');
         }
-    },
+    }
 );
