@@ -48,7 +48,8 @@ module.exports = {
                     'align',
                     'direction',
                     'gap',
-                    'max'
+                    'max',
+                    'role'
                 ]
             }
         ],
