@@ -7,7 +7,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { profileActions, updateProfileData } from 'entities/Profile';
 import { useSelector } from 'react-redux';
 import { getCanEditProfile } from 'entities/Profile/model/selectors/getCanEditProfile/getCanEditProfile';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface ProfilePageHeaderProps {
     className?: string,
@@ -32,26 +32,28 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = ({ className, reado
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack
+            justify="between"
+            className={classNames('', {}, [className])}
+            max
+        >
             <Text title={t('profil')} />
 
             {canEdit && (
-                <div className={cls.btnsWrapper}>
+                <div>
                     {readonly
                         ? (
                             <Button
                                 onClick={onEdit}
-                                className={cls.editBtn}
                                 theme={ButtonTheme.OUTLINE}
                             >
                                 {t('redaktirovat')}
                             </Button>
                         )
                         : (
-                            <>
+                            <HStack gap="8">
                                 <Button
                                     onClick={onCancelEdit}
-                                    className={cls.editBtn}
                                     theme={ButtonTheme.OUTLINE_RED}
                                 >
                                     {t('otmenit')}
@@ -59,16 +61,15 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = ({ className, reado
 
                                 <Button
                                     onClick={onSave}
-                                    className={cls.saveBtn}
                                     theme={ButtonTheme.OUTLINE}
                                 >
                                     {t('sohranit')}
                                 </Button>
-                            </>
+                            </HStack>
                         )}
                 </div>
             )}
 
-        </div>
+        </HStack>
     );
 };
