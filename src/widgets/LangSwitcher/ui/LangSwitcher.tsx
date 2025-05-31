@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface LangSwitcherProps {
-  className?: string
+  className?: string,
   short?: boolean
 }
 

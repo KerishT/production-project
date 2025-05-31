@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 import i18nForTests from 'shared/config/i18n/i18nForTests';
 
 export interface ComponentRenderOptions {
-  route?: string
+  route?: string,
   initialState?: DeepPartial<StateSchema>
 }
 

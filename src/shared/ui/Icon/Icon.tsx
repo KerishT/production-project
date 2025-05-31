@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
-    className?: string
+    className?: string,
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>
 }
 

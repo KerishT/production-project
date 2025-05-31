@@ -11,7 +11,7 @@ import { Comment } from '../../model/types/comment';
 import cls from './CommentCard.module.scss';
 
 interface CommentCardProps {
-    className?: string
+    className?: string,
     comment?: Comment,
     isLoading?: boolean
 }

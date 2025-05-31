@@ -3,16 +3,16 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Select.module.scss';
 
 export interface SelectOprions<T extends string> {
-    value: T
+    value: T,
     content: string
 }
 
 interface SelectProps<T extends string> {
-    className?: string
-    label?: string
-    options?: SelectOprions<T>[]
-    value?: T
-    disabled?: boolean
+    className?: string,
+    label?: string,
+    options?: SelectOprions<T>[],
+    value?: T,
+    disabled?: boolean,
     onChange?: (value: T) => void
 }
 

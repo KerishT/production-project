@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 interface RequireAuthProps {
-    children: JSX.Element;
+    children: JSX.Element
 }
 
 const RequireAuth = ({ children }: RequireAuthProps) => {

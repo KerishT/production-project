@@ -4,14 +4,14 @@ import cls from './Tabs.module.scss';
 import { Card, CardTheme } from '../Card/Card';
 
 export interface TabItem {
-    value: string
+    value: string,
     content: ReactNode
 }
 
 interface TabsProps {
-    className?: string
-    tabs: TabItem[]
-    value: string
+    className?: string,
+    tabs: TabItem[],
+    value: string,
     onTabClick: (tab: TabItem) => void
 }
 

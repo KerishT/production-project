@@ -13,8 +13,8 @@ import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 import cls from './Page.module.scss';
 
 interface PageProps {
-    className?: string
-    children: React.ReactNode
+    className?: string,
+    children: React.ReactNode,
     onScrollEnd?: () => void
 }
 

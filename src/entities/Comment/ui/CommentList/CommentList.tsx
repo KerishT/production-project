@@ -7,8 +7,8 @@ import { Comment } from '../../model/types/comment';
 import { CommentCard } from '../CommentCard/CommentCard';
 
 interface CommentListProps {
-    className?: string
-    comments?: Comment[]
+    className?: string,
+    comments?: Comment[],
     isLoading?: boolean
 }
 

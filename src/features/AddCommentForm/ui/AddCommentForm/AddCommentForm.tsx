@@ -16,7 +16,7 @@ const reducers: ReducersList = {
 };
 
 export interface AddCommentFormProps {
-    className?: string
+    className?: string,
     onSendComment: (text: string) => void
 }
 

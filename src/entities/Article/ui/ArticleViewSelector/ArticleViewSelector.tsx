@@ -7,8 +7,8 @@ import { ArticleView } from '../../model/types/article';
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
-    className?: string
-    view: ArticleView
+    className?: string,
+    view: ArticleView,
     onViewClick: (view: ArticleView) => void
 }
 

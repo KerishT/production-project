@@ -6,8 +6,8 @@ import { ArticleView } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemSkeletonProps {
-    className?: string;
-    view: ArticleView;
+    className?: string,
+    view: ArticleView
 }
 
 export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps) => {

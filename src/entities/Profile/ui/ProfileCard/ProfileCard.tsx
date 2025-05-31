@@ -24,7 +24,7 @@ interface ProfileCardProps {
     onChangeAvatar?: (value: string) => void,
     onChangeUsername?: (value: string) => void,
     onChangeCurrency?: (currency: Currency) => void,
-    onChangeCountry?: (country: Country) => void,
+    onChangeCountry?: (country: Country) => void
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {

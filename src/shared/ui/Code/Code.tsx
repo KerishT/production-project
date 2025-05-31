@@ -6,7 +6,7 @@ import { Icon } from '../Icon/Icon';
 import cls from './Code.module.scss';
 
 interface CodeProps {
-    className?: string
+    className?: string,
     text: string
 }
 

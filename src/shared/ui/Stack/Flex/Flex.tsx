@@ -32,13 +32,13 @@ const gapClasses: Record<FlexGap, string> = {
 };
 
 export interface FlexProps {
-    className?: string
-    children?: React.ReactNode
-    justify?: FlexJustify
-    align?: FlexAlign
-    direction?: FlexDirection
-    gap?: FlexGap;
-    max?: boolean;
+    className?: string,
+    children?: React.ReactNode,
+    justify?: FlexJustify,
+    align?: FlexAlign,
+    direction?: FlexDirection,
+    gap?: FlexGap,
+    max?: boolean
 }
 
 export const Flex = (props: FlexProps) => {

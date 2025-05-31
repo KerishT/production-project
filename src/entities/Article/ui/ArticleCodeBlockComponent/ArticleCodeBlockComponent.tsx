@@ -5,7 +5,7 @@ import { ArticleCodeBlock } from '../../model/types/article';
 import cls from './ArticleCodeBlockComponent.module.scss';
 
 interface ArticleCodeBlockComponentProps {
-    className?: string
+    className?: string,
     block: ArticleCodeBlock
 }
 

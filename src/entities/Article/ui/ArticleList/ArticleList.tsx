@@ -10,10 +10,10 @@ import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkele
 import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {
-    className?: string
-    articles: Article[]
-    isLoading?: boolean
-    view?: ArticleView
+    className?: string,
+    articles: Article[],
+    isLoading?: boolean,
+    view?: ArticleView,
     target?: HTMLAttributeAnchorTarget
 }
 

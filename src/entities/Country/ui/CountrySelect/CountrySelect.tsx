@@ -5,10 +5,10 @@ import { Select } from 'shared/ui/Select/Select';
 import { Country } from '../../model/types/country';
 
 interface CountrySelectProps {
-    className?: string;
-    value?: Country;
-    onChange?: (value: Country) => void;
-    readonly?: boolean;
+    className?: string,
+    value?: Country,
+    onChange?: (value: Country) => void,
+    readonly?: boolean
 }
 
 const options = [

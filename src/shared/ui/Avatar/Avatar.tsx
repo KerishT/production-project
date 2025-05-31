@@ -3,9 +3,9 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 
 interface AvatarProps {
-    className?: string
-    src?: string
-    size?: number
+    className?: string,
+    src?: string,
+    size?: number,
     alt: string
 }
 

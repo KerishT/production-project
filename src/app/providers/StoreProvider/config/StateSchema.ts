@@ -22,7 +22,7 @@ export interface StateSchema {
     profile?: ProfileSchema,
     articleDetails?: ArticleDetailsSchema,
     addCommentForm?: AddCommentFormSchema,
-    articlesPage?: ArticlesPageSchema
+    articlesPage?: ArticlesPageSchema,
     articleDetailsPage?: ArticleDetailsPageSchema
 }
 
@@ -36,15 +36,15 @@ export interface ReducerManager {
     remove: (key: StateSchemaKey) => void,
 
     // true - mounted, false - unmounted
-    getMountedReducers: () => MountedReducers,
+    getMountedReducers: () => MountedReducers
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
-    reducerManager: ReducerManager;
+    reducerManager: ReducerManager
 }
 
 export interface ThunkExtraArg {
-    api: AxiosInstance,
+    api: AxiosInstance
 }
 
 export interface ThunkConfig<T> {

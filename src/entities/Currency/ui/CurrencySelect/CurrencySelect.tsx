@@ -11,9 +11,9 @@ const options = [
 ];
 
 interface CurrencySelectProps {
-    className?: string
-    value?: Currency
-    readonly?: boolean
+    className?: string,
+    value?: Currency,
+    readonly?: boolean,
     onChange?: (value: Currency) => void
 }
 

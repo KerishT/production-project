@@ -60,6 +60,16 @@ module.exports = {
         'no-param-reassign': 0,
         'no-undef': 0,
         'comma-dangle': 0,
+        '@typescript-eslint/member-delimiter-style': [2, {
+            multiline: {
+                delimiter: 'comma',
+                requireLast: false,
+            },
+            singleline: {
+                delimiter: 'comma',
+                requireLast: false,
+            },
+        }],
         'react/no-array-index-key': 0,
         'kerish-plugin/path-checker': 2,
     },
