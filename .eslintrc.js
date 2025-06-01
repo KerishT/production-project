@@ -49,7 +49,8 @@ module.exports = {
                     'direction',
                     'gap',
                     'max',
-                    'role'
+                    'role',
+                    'as'
                 ]
             }
         ],
