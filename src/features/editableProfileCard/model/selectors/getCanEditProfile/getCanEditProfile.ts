@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { getUserAuthData, User } from 'entities/User';
+import { Profile } from 'entities/Profile';
 import { getProfileData } from '../getProfileData/getProfileData';
-import { Profile } from '../../types/profile';
 
 export const getCanEditProfile = createSelector(
     [getUserAuthData, getProfileData],
