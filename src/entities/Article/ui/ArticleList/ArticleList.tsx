@@ -14,7 +14,8 @@ interface ArticleListProps {
     articles: Article[],
     isLoading?: boolean,
     view?: ArticleView,
-    target?: HTMLAttributeAnchorTarget
+    target?: HTMLAttributeAnchorTarget,
+    virtualized?: boolean
 }
 
 const getScletons = (view: ArticleView) => (new Array(view === ArticleView.BIG ? 4 : 12)
@@ -29,7 +30,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
         articles,
         isLoading,
         view = ArticleView.SMALL,
-        target
+        target,
+        virtualized = true
     } = props;
     const { t } = useTranslation();
 
@@ -90,17 +92,29 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     ref={registerChild}
                     className={classNames(cls.ArticleList, {}, [className, cls[view]])}
                 >
-                    <List
-                        height={height ?? 700}
-                        rowCount={rowCount}
-                        rowHeight={isBig ? 700 : 330}
-                        rowRenderer={rowRenderer}
-                        width={width ? width - 80 : 700}
-                        autoHeight
-                        onScroll={onChildScroll}
-                        isScrolling={isScrolling}
-                        scrollTop={scrollTop}
-                    />
+                    {virtualized
+                        ? (
+                            <List
+                                height={height ?? 700}
+                                rowCount={rowCount}
+                                rowHeight={isBig ? 700 : 330}
+                                rowRenderer={rowRenderer}
+                                width={width ? width - 80 : 700}
+                                autoHeight
+                                onScroll={onChildScroll}
+                                isScrolling={isScrolling}
+                                scrollTop={scrollTop}
+                            />
+                        )
+                        : articles.map((item) => (
+                            <ArticleListItem
+                                key={item.id}
+                                article={item}
+                                view={view}
+                                target={target}
+                                className={cls.card}
+                            />
+                        ))}
                     {isLoading && getScletons(view)}
                 </div>
 
