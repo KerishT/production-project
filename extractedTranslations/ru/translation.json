@@ -1,6 +1,9 @@
 {
   "": "",
   "00000000": "00000000",
+  "Admin": "Admin",
+  "Admin Panel": "Admin Panel",
+  "Admin panel": "Admin panel",
   "All": "All",
   "Back to list": "Back to list",
   "Create": "Create",
@@ -26,6 +29,7 @@
   "Vi-vveli-neverniy-login-ili-parol": "Vi-vveli-neverniy-login-ili-parol",
   "Vvedite parol": "Vvedite parol",
   "Vvedite username": "Vvedite username",
+  "You do not have access to this page": "You do not have access to this page",
   "article-details": "article-details",
   "articles-page": "articles-page",
   "ascending": "ascending",
