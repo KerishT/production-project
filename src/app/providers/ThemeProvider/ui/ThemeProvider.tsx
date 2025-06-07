@@ -8,7 +8,8 @@ import {
 const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT;
 
 interface ThemeProviderProps {
-    initialTheme?: Theme
+    initialTheme?: Theme,
+    children?: React.ReactNode
 }
 
 const ThemeProvider: FC<ThemeProviderProps> = ({ initialTheme, children }) => {
