@@ -9,9 +9,8 @@ import { Icon } from 'shared/ui/Icon/Icon';
 import { Text } from 'shared/ui/Text/Text';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import {
-    Article, ArticleBlockType, ArticleTextBlock, ArticleView
-} from '../../model/types/article';
+import { ArticleView, ArticleBlockType } from '../../model/consts/articleConsts';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
 

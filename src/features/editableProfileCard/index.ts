@@ -10,4 +10,4 @@ export { getProfileReadonly } from './model/selectors/getProfileReadonly/getProf
 export { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 export { getCanEditProfile } from './model/selectors/getCanEditProfile/getCanEditProfile';
 export { EditableProfileCard } from './ui/EditableProfileCard/EditableProfileCard';
-export { ProfileSchema } from './model/types/editableProfileCardSchema';
+export type { ProfileSchema } from './model/types/editableProfileCardSchema';
