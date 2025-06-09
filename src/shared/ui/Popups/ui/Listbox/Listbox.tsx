@@ -2,22 +2,17 @@ import { Fragment, ReactNode } from 'react';
 import { Listbox as HListbox } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
+import { Button } from '../../../Button/Button';
+import { HStack } from '../../../Stack';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/popup.module.scss';
 import cls from './Listbox.module.scss';
-import { Button } from '../Button/Button';
-import { HStack } from '../Stack';
 
 export interface ListboxItem {
     value: string,
     content: ReactNode,
     disabled?: boolean
 }
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-    'top left': cls.optionsTopLeft,
-    'top right': cls.optionsTopRight,
-    'bottom left': cls.optionsBottomLeft,
-    'bottom right': cls.optionsBottomRight
-};
 
 interface ListboxProps {
     className?: string,
@@ -48,7 +43,7 @@ export const Listbox = (props: ListboxProps) => {
 
             <HListbox
                 as="div"
-                className={classNames(cls.Listbox, {}, [className])}
+                className={classNames(cls.Listbox, {}, [className, popupCls.popup])}
                 value={value}
                 onChange={onChange}
                 disabled={readonly}
@@ -79,8 +74,8 @@ export const Listbox = (props: ListboxProps) => {
                                     className={classNames(
                                         cls.item,
                                         {
-                                            [cls.active]: active,
-                                            [cls.disabled]: item.disabled
+                                            [popupCls.active]: active,
+                                            [popupCls.disabled]: item.disabled
                                         },
                                         []
                                     )}
