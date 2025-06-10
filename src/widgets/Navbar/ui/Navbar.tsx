@@ -1,8 +1,5 @@
 import {
-    getUserAuthData,
-    isUserAdmin,
-    isUserManager,
-    userActions
+    getUserAuthData
 } from 'entities/User';
 import { LoginModal } from 'features/AuthByUserName';
 import { AvatarDropdown } from 'features/avatarDropdown';
@@ -11,7 +8,7 @@ import {
     memo, useCallback, useState
 } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
