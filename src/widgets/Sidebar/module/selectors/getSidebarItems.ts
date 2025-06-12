@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { getUserAuthData } from 'entities/User';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import SvgIcon from 'shared/assets/icons/svg-icon.svg';
+import { getUserAuthData } from '@/entities/User';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import SvgIcon from '@/shared/assets/icons/svg-icon.svg';
 import { SidebarItemType } from '../types/sidebar';
 
 export const getSidebarItems = createSelector(
