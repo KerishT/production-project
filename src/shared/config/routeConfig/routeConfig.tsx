@@ -40,7 +40,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.ADMIN_PANEL]: '/admin',
     [AppRoutes.FORBIDDEN]: '/forbidden',
     // last
-    [AppRoutes.NOT_FOUND]: ' *'
+    [AppRoutes.NOT_FOUND]: '*'
 };
 
 export const RouteConfig: Record<AppRoutes, AppRoutesProps> = {

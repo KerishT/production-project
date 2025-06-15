@@ -5,8 +5,8 @@ export default {
     title: '<slice>/<FTName>',
     component: <FTName>,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof <FTName>>;
 
 const Template: ComponentStory<typeof <FTName>> = (args) => <<FTName> {...args} />;
