@@ -83,7 +83,7 @@ module.exports = {
             tuples: 'never'
         }],
         'react/no-array-index-key': 0,
-        'kerish-plugin/path-checker': 2
+        'kerish-plugin/path-checker': [2, { alias: '@' }]
     },
     globals: {
         __IS_DEV__: true,
