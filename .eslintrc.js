@@ -84,6 +84,10 @@ module.exports = {
         }],
         'react/no-array-index-key': 0,
         'kerish-plugin/path-checker': [2, { alias: '@' }],
+        'kerish-plugin/layer-imports': [2, {
+            alias: '@',
+            ignoreImportPatterns: ['**/StoreProvider', '**/testing']
+        }],
         'kerish-plugin/public-api-imports': [2, {
             alias: '@',
             testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx']
