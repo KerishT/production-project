@@ -18,7 +18,8 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'kerish-plugin'
+        'kerish-plugin',
+        'unused-imports'
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -83,6 +84,7 @@ module.exports = {
             tuples: 'never'
         }],
         'react/no-array-index-key': 0,
+        'unused-imports/no-unused-imports': 2,
         'kerish-plugin/path-checker': [2, { alias: '@' }],
         'kerish-plugin/layer-imports': [2, {
             alias: '@',
