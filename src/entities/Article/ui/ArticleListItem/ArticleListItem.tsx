@@ -8,7 +8,7 @@ import { Card } from '@/shared/ui/Card';
 import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
 import { AppLink } from '@/shared/ui/AppLink';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleDetails } from '@/shared/const/router';
 import { ArticleView, ArticleBlockType } from '../../model/consts/articleConsts';
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
@@ -75,7 +75,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
                     <div className={cls.footer}>
                         <AppLink
-                            to={RoutePath.articles_details + article.id}
+                            to={getRouteArticleDetails(article.id)}
                             target={target}
                         >
                             <Button>{t('Read more')}</Button>
@@ -90,7 +90,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
-            to={RoutePath.articles_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             target={target}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >

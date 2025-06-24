@@ -9,7 +9,7 @@ import {
 import { LoginModal } from '@/features/AuthByUserName';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
@@ -44,7 +44,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 />
 
                 <AppLink
-                    to={RoutePath.articles_create}
+                    to={getRouteArticleCreate()}
                     theme={AppLinkTheme.SECONDARY}
                     className={cls.createLink}
                 >
