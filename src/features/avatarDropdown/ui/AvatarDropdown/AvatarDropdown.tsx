@@ -38,6 +38,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             direction="bottom left"
             trigger={(
                 <Avatar
+                    fallbackInverted
                     src={authData.avatar}
                     alt={authData.username}
                     size={30}
