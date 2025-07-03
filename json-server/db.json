@@ -582,6 +582,15 @@
         "MANAGER"
       ],
       "avatar": "https://i.imgur.com/B29b18e.jpeg"
+    },
+    {
+      "id": "4",
+      "username": "test",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://i.imgur.com/B29b18e.jpeg"
     }
   ],
   "profile": [
