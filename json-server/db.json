@@ -515,6 +515,19 @@
           ]
         }
       ]
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Биология",
+      "img": "https://i.imgur.com/B29b18e.jpeg",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "xeNgUWP"
     }
   ],
   "comments": [
@@ -614,6 +627,28 @@
       "country": "Russia",
       "city": "Moscow",
       "username": "user",
+      "avatar": "https://i.imgur.com/B29b18e.jpeg"
+    },
+    {
+      "id": "3",
+      "first": "Антон",
+      "lastname": "Туриста",
+      "age": 25,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "user",
+      "avatar": "https://i.imgur.com/B29b18e.jpeg"
+    },
+    {
+      "id": "4",
+      "first": "Антон",
+      "lastname": "Туриста",
+      "age": 30,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "test",
       "avatar": "https://i.imgur.com/B29b18e.jpeg"
     }
   ],
