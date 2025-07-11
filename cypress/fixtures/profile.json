@@ -1,0 +1,11 @@
+{
+    "id": "1",
+    "first": "Антон",
+    "lastname": "Туриста",
+    "age": 30,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "test",
+    "avatar": "https://i.imgur.com/B29b18e.jpeg"
+}
