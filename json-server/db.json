@@ -576,6 +576,10 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://i.imgur.com/B29b18e.jpeg"
     },
     {
@@ -585,8 +589,12 @@
       "roles": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false
+      },
       "avatar": "https://i.imgur.com/B29b18e.jpeg"
-    },
+    }, 
     {
       "id": "3",
       "username": "manager",
@@ -594,6 +602,10 @@
       "roles": [
         "MANAGER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": true
+      },
       "avatar": "https://i.imgur.com/B29b18e.jpeg"
     },
     {
@@ -603,6 +615,10 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://i.imgur.com/B29b18e.jpeg"
     }
   ],
