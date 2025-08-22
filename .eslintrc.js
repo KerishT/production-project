@@ -93,7 +93,8 @@ module.exports = {
         'kerish-plugin/public-api-imports': [2, {
             alias: '@',
             testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx']
-        }]
+        }],
+        'react/no-unstable-nested-components': 1
     },
     globals: {
         __IS_DEV__: true,
