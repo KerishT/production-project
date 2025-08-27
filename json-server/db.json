@@ -584,7 +584,7 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isArticlesPageWasOpened": true
       }
     },
     {
@@ -598,7 +598,10 @@
         "isArticleRatingEnabled": false,
         "isCounterEnabled": false
       },
-      "avatar": "https://i.imgur.com/B29b18e.jpeg"
+      "avatar": "https://i.imgur.com/B29b18e.jpeg",
+      "jsonSettings": {
+        "isArticlesPageWasOpened": true
+      }
     },
     {
       "id": "3",
@@ -611,7 +614,10 @@
         "isArticleRatingEnabled": false,
         "isCounterEnabled": true
       },
-      "avatar": "https://i.imgur.com/B29b18e.jpeg"
+      "avatar": "https://i.imgur.com/B29b18e.jpeg",
+      "jsonSettings": {
+        "isArticlesPageWasOpened": true
+      }
     },
     {
       "id": "4",

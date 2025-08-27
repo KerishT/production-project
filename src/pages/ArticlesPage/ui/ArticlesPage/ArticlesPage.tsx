@@ -11,6 +11,7 @@ import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPag
 import { articlesPageReducer } from '../../model/slices/ArticlesPageSlice';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
+import { ArticlePageGreeting } from '@/features/articlePageGreeting';
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
@@ -48,6 +49,8 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                     <ArticlesPageFilters />
 
                     <ArticleInfiniteList />
+
+                    <ArticlePageGreeting />
                 </VStack>
 
             </Page>
