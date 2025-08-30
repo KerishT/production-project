@@ -51,7 +51,8 @@ module.exports = {
                     'gap',
                     'max',
                     'role',
-                    'as'
+                    'as',
+                    'feature'
                 ]
             }
         ],
