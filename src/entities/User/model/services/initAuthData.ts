@@ -12,16 +12,12 @@ export const initAuthData = createAsyncThunk<User, void, ThunkConfig<string>>(
         } = thunkAPI;
         const userId = localStorage.getItem(USER_LOCALSTORAGE_KEY);
 
-        console.log(userId);
-
         try {
             if (!userId) {
                 throw new Error();
             }
 
             const response = await dispatch(getUserDataByIdQuery(userId)).unwrap();
-
-            console.log(response);
 
             return response;
         } catch (e) {

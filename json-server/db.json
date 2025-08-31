@@ -578,7 +578,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "avatar": "https://i.imgur.com/B29b18e.jpeg",
       "jsonSettings": {

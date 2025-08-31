@@ -7,6 +7,27 @@
 @font-face {
     font-family: Consolas;
     src: url("../assets/fonts/Consolas.ttf") format("truetype");
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("../assets/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf") format("truetype");
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-display: swap;
 }
 
 .app,
@@ -19,6 +40,13 @@
 .app {
     min-height: 100vh;
     background-color: var(--bg-color);
+}
+
+.app_redesigned {
+    min-height: 100vh;
+    background-color: var(--bg-redesigned);
+    font: var(--font-m-redesigned);
+    color: var(--text-redesigned);
 }
 
 .content-page {

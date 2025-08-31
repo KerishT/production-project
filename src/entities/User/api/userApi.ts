@@ -19,14 +19,10 @@ const userApi = rtkApi.injectEndpoints({
             })
         }),
         getUserDataById: build.query<User, string>({
-            query: (userId) => {
-                console.log(userId);
-
-                return {
-                    url: `/users/${userId}`,
-                    method: 'GET'
-                };
-            }
+            query: (userId) => ({
+                url: `/users/${userId}`,
+                method: 'GET'
+            })
         })
     })
 });

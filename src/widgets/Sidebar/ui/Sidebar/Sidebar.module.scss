@@ -6,6 +6,13 @@
     transition: width 0.3s;
 }
 
+.SidebarRedesigned {
+    background: var(--light-bg-redesigned);
+    width: 220px;
+    height: 100%;
+    border-radius: 32px;
+}
+
 .collapseBtn {
     z-index: var(--sidebar-z-index);
     position: absolute;
@@ -41,4 +48,8 @@
     .lang {
         margin-left: 0;
     }
+}
+
+.appLogo {
+    padding-top: 20px;
 }
