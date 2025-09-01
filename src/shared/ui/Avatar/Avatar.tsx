@@ -29,8 +29,8 @@ export const Avatar = memo((props: AvatarProps) => {
 
     const fallback = (
         <Skeleton
-            width={32}
-            height={32}
+            width={size}
+            height={size}
             border="50%"
         />
     );
@@ -38,8 +38,8 @@ export const Avatar = memo((props: AvatarProps) => {
         <Icon
             inverted={fallbackInverted}
             Svg={SvgIcon}
-            width={32}
-            height={32}
+            width={size}
+            height={size}
         />
     );
 

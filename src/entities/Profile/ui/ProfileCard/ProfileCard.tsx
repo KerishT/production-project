@@ -95,6 +95,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     <Avatar
                         src={data.avatar}
                         alt={`${t('avatar')} ${data.username}`}
+                        size={100}
                     />
                 </HStack>
             )}
