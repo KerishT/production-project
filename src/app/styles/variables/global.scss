@@ -1,7 +1,5 @@
 :root {
     --font-family-main: consolas, serif;
-    --font-family-title-redesigned: roboto, sans-serif;
-    --font-family-text-redesigned: "Nunito Sans", sans-serif;
 
     // s
     --font-size-s: 12px;
@@ -23,12 +21,28 @@
     --font-line-xl: 40px;
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
-    //  Размеры
+    // Sizes
     --navbar-height: 50px;
     --sidebar-width: 300px;
     --sidebar-width-collapsed: 80px;
 
+    // z-index
+    --sidebar-z-index: 10;
+    --modal-z-index: 100;
+    --dropdown-z-index: 100;
+    --popover-z-index: 100;
+    --listbox-z-index: 100;
+    --drawer-z-index: 100;
+
+    // Colors
+    --overlay-color: rgba(0 0 0 / 60%);
+    --red-light: #f00;
+    --red-dark: #ce0505;
+
     // redesigned
+
+    --font-family-title-redesigned: roboto, sans-serif;
+    --font-family-text-redesigned: "Nunito Sans", sans-serif;
 
     // s
     --font-s-redesigned: var(--font-size-s) / var(--font-line-s) var(--font-family-text-redesigned);
@@ -43,15 +57,8 @@
     --font-xl-redesigned: var(--font-size-xl) / var(--font-line-xl) var(--font-family-title-redesigned);
 
     // z-index
-    --sidebar-z-index: 10;
-    --modal-z-index: 100;
-    --dropdown-z-index: 100;
-    --popover-z-index: 100;
-    --listbox-z-index: 100;
-    --drawer-z-index: 100;
+    --app-logo-z-index: 10;
 
-    // Цвета
-    --overlay-color: rgba(0 0 0 / 60%);
-    --red-light: #f00;
-    --red-dark: #ce0505;
+    // Sizes
+    --sidebar-width-collapsed-redesigned: 50px;
 }

@@ -52,7 +52,9 @@ module.exports = {
                     'max',
                     'role',
                     'as',
-                    'feature'
+                    'feature',
+                    'color',
+                    'variant'
                 ]
             }
         ],

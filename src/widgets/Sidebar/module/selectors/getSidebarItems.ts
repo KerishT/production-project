@@ -5,6 +5,7 @@ import {
 } from '@/shared/const/router';
 import SvgIcon from '@/shared/assets/icons/svg-icon.svg';
 import { SidebarItemType } from '../types/sidebar';
+import { toggleFeatures } from '@/shared/lib/features';
 
 export const getSidebarItems = createSelector(
     getUserAuthData,
@@ -13,12 +14,20 @@ export const getSidebarItems = createSelector(
             {
                 path: getRouteMain(),
                 text: 'Главная',
-                Icon: SvgIcon
+                Icon: toggleFeatures({
+                    name: 'isAppRedesigned',
+                    on: () => SvgIcon,
+                    off: () => SvgIcon
+                })
             },
             {
                 path: getRouteAbout(),
                 text: 'О сайте',
-                Icon: SvgIcon
+                Icon: toggleFeatures({
+                    name: 'isAppRedesigned',
+                    on: () => SvgIcon,
+                    off: () => SvgIcon
+                })
             }
         ];
 
@@ -27,13 +36,21 @@ export const getSidebarItems = createSelector(
                 {
                     path: getRouteProfile(userData.id),
                     text: 'Профиль',
-                    Icon: SvgIcon,
+                    Icon: toggleFeatures({
+                        name: 'isAppRedesigned',
+                        on: () => SvgIcon,
+                        off: () => SvgIcon
+                    }),
                     authOnly: true
                 },
                 {
                     path: getRouteArticles(),
                     text: 'Статьи',
-                    Icon: SvgIcon,
+                    Icon: toggleFeatures({
+                        name: 'isAppRedesigned',
+                        on: () => SvgIcon,
+                        off: () => SvgIcon
+                    }),
                     authOnly: true
                 }
             );
