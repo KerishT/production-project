@@ -6,7 +6,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { AppLogo } from '@/shared/ui/redesigned/AppLogo';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/deprecated/Button';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { getSidebarItems } from '../../module/selectors/getSidebarItems';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import SvgIcon from '@/shared/assets/icons/svg-icon.svg';
