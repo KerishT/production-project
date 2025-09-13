@@ -1,3 +1,11 @@
-.notSelected {
-    fill: var(--secondary-color);
+.ArticleViewSelector {
+    .notSelected {
+        fill: var(--secondary-color);
+    }
+}
+
+.ArticleViewSelectorRedesigned {
+    .notSelected {
+        fill: var(--light-bg-redesigned);
+    }
 }
