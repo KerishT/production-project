@@ -8,17 +8,19 @@ import { Input } from '@/shared/ui/redesigned/Input';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { ArticleSortField, ArticleType } from '@/entities/Article';
 import { SortOrder } from '@/shared/types/sort';
+import SvgIcon from '@/shared/assets/icons/svg-icon.svg';
 import cls from './ArticlesFilters.module.scss';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 
 interface ArticlesFiltersProps {
     className?: string,
     search: string,
-    onChangeSearch: (value: string) => void,
     sort: ArticleSortField,
     order: SortOrder,
+    type: ArticleType,
+    onChangeSearch: (value: string) => void,
     onChangeSort: (newOrder: ArticleSortField) => void,
     onChangeOrder: (newOrder: SortOrder) => void,
-    type: ArticleType,
     onChangeType: (type: ArticleType) => void
 }
 
@@ -40,9 +42,11 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
         <Card className={classNames(cls.ArticlesFilters, {}, [className])} padding="24">
             <VStack gap="32">
                 <Input
+                    id="search"
                     placeholder={t('Search')}
                     onChange={onChangeSearch}
                     value={search}
+                    addonLeft={<Icon Svg={SvgIcon} width={16} height={16} />}
                 />
 
                 <ArticleTypeTabs

@@ -6,7 +6,9 @@ import { Button } from '../../../Button/Button';
 import { HStack } from '../../../../redesigned/Stack';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
+import SvgIcon from '@/shared/assets/icons/svg-icon.svg';
 import cls from './Listbox.module.scss';
+import { Icon } from '../../../Icon';
 
 export interface ListboxItem<T extends string> {
     value: T,
@@ -61,6 +63,7 @@ export function Listbox<T extends string>(props: ListboxProps<T>) {
                     <Button
                         variant="filled"
                         disabled={readonly}
+                        addonRight={<Icon Svg={SvgIcon} width={12} height={12} />}
                     >
                         {selectedItem?.content ?? defaultValue}
                     </Button>
