@@ -81,5 +81,13 @@
   "Thank you for your rating": "Thank you for your rating",
   "Article rating will appear soon": "Article rating will appear soon",
   "Welcome to the articles page": "Welcome to the articles page",
-  "Here you can search and view articles on various topics": "Here you can search and view articles on various topics"
+  "Here you can search and view articles on various topics": "Here you can search and view articles on various topics",
+  "Name": "Name",
+  "Surname": "Surname",
+  "Age": "Age",
+  "Username": "Username",
+  "Avatar link": "Avatar link",
+  "Currency": "Currency",
+  "Country": "Country",
+  "Avatar": "Avatar"
 }

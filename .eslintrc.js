@@ -55,7 +55,8 @@ module.exports = {
                     'feature',
                     'color',
                     'variant',
-                    'border'
+                    'border',
+                    'size'
                 ]
             }
         ],

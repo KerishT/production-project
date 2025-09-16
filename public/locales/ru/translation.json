@@ -82,5 +82,13 @@
   "Thank you for your rating": "Спасибо за оценку",
   "Article rating will appear soon": "Оценка статьи скоро появится",
   "Welcome to the articles page": "Добро пожаловать на страницу статей",
-  "Here you can search and view articles on various topics": "Здесь вы можете искать и просматривать статьи на различные темы"
+  "Here you can search and view articles on various topics": "Здесь вы можете искать и просматривать статьи на различные темы",
+  "Name": "Имя",
+  "Surname": "Фамилия",
+  "Username": "Username",
+  "Avatar link": "Ссылка на аватар",
+  "Currency": "Валюта",
+  "Country": "Страна",
+  "Age": "Возраст",
+  "Avatar": "Аватар"
 }

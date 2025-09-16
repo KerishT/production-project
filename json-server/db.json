@@ -571,7 +571,7 @@
       },
       "avatar": "https://i.imgur.com/B29b18e.jpeg",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "isArticlesPageWasOpened": true
       }
@@ -630,7 +630,7 @@
       "lastname": "Ульби",
       "age": 22,
       "currency": "RUB",
-      "country": "Russia",
+      "country": "Kazahstan",
       "city": "Moscow",
       "username": "admin",
       "avatar": "https://i.imgur.com/B29b18e.jpeg"
