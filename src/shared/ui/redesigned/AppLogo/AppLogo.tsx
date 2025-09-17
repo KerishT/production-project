@@ -3,7 +3,7 @@ import cls from './AppLogo.module.scss';
 import { HStack } from '../Stack';
 import SvgIcon from '@/shared/assets/icons/svg-icon.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Icon } from '../../deprecated/Icon';
+import { Icon } from '../Icon';
 
 interface AppLogoProps {
     className?: string,
@@ -21,7 +21,7 @@ export const AppLogo = memo(({ className, size = 50 }: AppLogoProps) => (
 
         <Icon
             Svg={SvgIcon}
-            className={cls.icon}
+            className={cls.appLogo}
             width={size}
             height={size}
         />
