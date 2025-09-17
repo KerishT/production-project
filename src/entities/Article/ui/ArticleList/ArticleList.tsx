@@ -5,7 +5,7 @@ import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 import { ArticleView } from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleon';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleon/ArticleListItemSkeleon';
 import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {
@@ -54,8 +54,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     className={cls.card}
                 />
             ))}
+
             {isLoading && getSkeletons(view)}
         </div>
-
     );
 });

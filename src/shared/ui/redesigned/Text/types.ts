@@ -13,5 +13,6 @@ export interface TextProps {
     variant?: TextVariant,
     align?: TextAlign,
     size?: TextSize,
-    'data-testid'?: string
+    'data-testid'?: string,
+    bold?: boolean
 }
