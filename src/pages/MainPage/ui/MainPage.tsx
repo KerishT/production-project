@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Page } from '@/widgets/Page';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 const MainPage = () => {
     const { t } = useTranslation();
@@ -8,7 +9,7 @@ const MainPage = () => {
         <Page
             data-testid="MainPage"
         >
-            {t('Главная')}
+            <Text title={t('Главная')} />
         </Page>
     );
 };

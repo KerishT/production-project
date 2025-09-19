@@ -571,7 +571,7 @@
       },
       "avatar": "https://i.imgur.com/B29b18e.jpeg",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "isArticlesPageWasOpened": true
       }

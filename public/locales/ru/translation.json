@@ -90,5 +90,8 @@
   "Currency": "Валюта",
   "Country": "Страна",
   "Age": "Возраст",
-  "Avatar": "Аватар"
+  "Avatar": "Аватар",
+  "User settings": "Настройки пользователя",
+  "Interface option": "Вариант интерфейса",
+  "Settings": "Настройки"
 }
