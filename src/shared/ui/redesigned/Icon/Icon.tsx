@@ -5,7 +5,7 @@ import cls from './Icon.module.scss';
 
 export const Icon = memo((props: IconProps) => {
     const {
-        className, Svg, width = 32, height = 32, clicable, ...other
+        className, Svg, width = 32, height = 32, clicable, 'data-testid': dataTestId, ...other
     } = props;
 
     const icon = (
@@ -23,6 +23,7 @@ export const Icon = memo((props: IconProps) => {
     if (clicable) {
         return (
             <button
+                data-testid={dataTestId}
                 type="button"
                 onClick={props.onClick}
                 className={cls.button}
