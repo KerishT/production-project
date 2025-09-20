@@ -1,12 +1,13 @@
 import {
     memo, ReactNode, useCallback, useEffect
 } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { Additional, classNames } from '@/shared/lib/classNames/classNames';
 import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
-import { Overlay } from '../../redesigned/Overlay/Overlay';
-import { Portal } from '../../redesigned/Portal/Portal';
+import { Overlay } from '../Overlay/Overlay';
+import { Portal } from '../Portal/Portal';
 import cls from './Drawer.module.scss';
+import { toggleFeatures } from '@/shared/lib/features';
 
 interface DrawerProps {
     className?: string,
@@ -18,10 +19,6 @@ interface DrawerProps {
 
 const height = window.innerHeight - 100;
 
-/**
- * Outdated, use new components from redesigned folder
- * @deprecated
- */
 const DrawerContent = (props: DrawerProps) => {
     const {
         className,
@@ -82,6 +79,17 @@ const DrawerContent = (props: DrawerProps) => {
         rubberband: true
     });
 
+    const aditional: Additional = [
+        className,
+        theme,
+        'app_drawer',
+        toggleFeatures({
+            name: 'isAppRedesigned',
+            on: () => cls.drawerNew,
+            off: () => cls.drawerOld
+        })
+    ];
+
     if (!isOpen) {
         return null;
     }
@@ -89,8 +97,8 @@ const DrawerContent = (props: DrawerProps) => {
     const display = y.to((py) => (py < height ? 'block' : 'none'));
 
     return (
-        <Portal>
-            <div className={classNames(cls.Drawer, {}, [className, theme, 'app_drawer'])}>
+        <Portal element={document.getElementById('app') ?? document.body}>
+            <div className={classNames(cls.Drawer, {}, aditional)}>
                 <Overlay onClick={close} />
 
                 <Spring.a.div
@@ -105,10 +113,6 @@ const DrawerContent = (props: DrawerProps) => {
     );
 };
 
-/**
- * Outdated, use new components from redesigned folder
- * @deprecated
- */
 export const DrawerAsync = (props: DrawerProps) => {
     const { isLoaded } = useAnimationLibs();
 
@@ -119,10 +123,6 @@ export const DrawerAsync = (props: DrawerProps) => {
     return <DrawerContent {...props} />;
 };
 
-/**
- * Outdated, use new components from redesigned folder
- * @deprecated
- */
 export const Drawer = memo((props: DrawerProps) => (
     <AnimationProvider>
         <DrawerAsync {...props} />

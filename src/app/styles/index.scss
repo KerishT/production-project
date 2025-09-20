@@ -30,14 +30,9 @@
     font-display: swap;
 }
 
-.app,
-.app_modal,
-.app_drawer {
+.app {
     font: var(--font-m);
     color: var(--primary-color);
-}
-
-.app {
     min-height: 100vh;
     background-color: var(--bg-color);
 }

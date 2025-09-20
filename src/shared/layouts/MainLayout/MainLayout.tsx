@@ -24,7 +24,7 @@ export const MainLayout = memo((props: MainLayoutProps) => {
             <div className={cls.rightbar}>
                 <div className={cls.header}>{header}</div>
 
-                <div className={cls.toolbar}>{toolbar}</div>
+                {toolbar && <div className={cls.toolbar}>{toolbar}</div>}
             </div>
         </div>
     );

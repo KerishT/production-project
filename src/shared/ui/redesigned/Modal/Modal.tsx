@@ -2,12 +2,13 @@ import {
     FC,
     ReactNode
 } from 'react';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { Additional, classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { Overlay } from '../../redesigned/Overlay/Overlay';
 import { Portal } from '../../redesigned/Portal/Portal';
 import cls from './Modal.module.scss';
+import { toggleFeatures } from '@/shared/lib/features';
 
 interface ModalProps {
   className?: string,
@@ -17,10 +18,6 @@ interface ModalProps {
   onClose?: () => void
 }
 
-/**
- * Outdated, use new components from redesigned folder
- * @deprecated
- */
 export const Modal: FC<ModalProps> = ({
     className, children, isOpen, lazy, onClose
 }) => {
@@ -32,13 +29,24 @@ export const Modal: FC<ModalProps> = ({
         [cls.isClosing]: isClosing
     };
 
+    const aditional: Additional = [
+        className,
+        theme,
+        'app_modal',
+        toggleFeatures({
+            name: 'isAppRedesigned',
+            on: () => cls.modalNew,
+            off: () => cls.modalOld
+        })
+    ];
+
     if (lazy && !isMounted) {
         return null;
     }
 
     return (
-        <Portal>
-            <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
+        <Portal element={document.getElementById('app') ?? document.body}>
+            <div className={classNames(cls.Modal, mods, aditional)}>
                 <Overlay onClick={close} />
 
                 <div className={cls.content}>
