@@ -1,13 +1,11 @@
-import { memo, useCallback } from 'react';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
 import { Button } from '@/shared/ui/deprecated/Button';
-import { getArticleDetailsData } from '@/entities/Article';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { getCanEditArticleDetails } from '../../model/selectors/article';
+import { useArticleNavigate } from '../../model/hooks/useArticleNavigate';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string
@@ -16,19 +14,8 @@ interface ArticleDetailsPageHeaderProps {
 export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderProps) => {
     const { className } = props;
     const { t } = useTranslation();
-    const navigate = useNavigate();
     const canEdit = useSelector(getCanEditArticleDetails);
-    const article = useSelector(getArticleDetailsData);
-
-    const onBackToList = useCallback(() => {
-        navigate(getRouteArticles());
-    }, [navigate]);
-
-    const onEditArticle = useCallback(() => {
-        if (article?.id) {
-            navigate(getRouteArticleEdit(article?.id));
-        }
-    }, [article?.id, navigate]);
+    const { onBack, onEdit } = useArticleNavigate();
 
     return (
         <HStack
@@ -37,14 +24,14 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
             className={classNames('', {}, [className])}
         >
             <Button
-                onClick={onBackToList}
+                onClick={onBack}
             >
                 {t('Back to list')}
             </Button>
 
             {canEdit && (
                 <Button
-                    onClick={onEditArticle}
+                    onClick={onEdit}
                 >
                     {t('Edit')}
                 </Button>

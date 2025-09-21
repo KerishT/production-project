@@ -93,5 +93,9 @@
   "Avatar": "Аватар",
   "User settings": "Настройки пользователя",
   "Interface option": "Вариант интерфейса",
-  "Settings": "Настройки"
+  "Settings": "Настройки",
+  "{{count}} views_zero": "{{count}} просмотров",
+  "{{count}} views_one": "{{count}} просмотр",
+  "{{count}} views_few": "{{count}} просмотра",
+  "{{count}} views_many": "{{count}} просмотров"
 }
