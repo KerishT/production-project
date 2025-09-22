@@ -9,13 +9,13 @@ interface IconBaseProps extends SvgProps {
 interface NonClickableIconProps extends IconBaseProps {
     className?: string,
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>,
-    clicable?: false
+    clickable?: false
 }
 
 interface ClickableIconBaseProps extends IconBaseProps {
     className?: string,
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>,
-    clicable?: true,
+    clickable?: true,
     onClick: () => void
 }
 

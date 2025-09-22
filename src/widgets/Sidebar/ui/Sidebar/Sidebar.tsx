@@ -62,7 +62,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                         data-testid="sidebar-toggle"
                         Svg={SvgIcon}
                         className={classNames(cls.collapseBtn)}
-                        clicable
+                        clickable
                         onClick={onToggle}
                         width={14}
                         height={14}

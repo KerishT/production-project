@@ -5,7 +5,7 @@ import cls from './Icon.module.scss';
 
 export const Icon = memo((props: IconProps) => {
     const {
-        className, Svg, width = 32, height = 32, clicable, 'data-testid': dataTestId, ...other
+        className, Svg, width = 32, height = 32, clickable, 'data-testid': dataTestId, ...other
     } = props;
 
     const icon = (
@@ -20,7 +20,7 @@ export const Icon = memo((props: IconProps) => {
         />
     );
 
-    if (clicable) {
+    if (clickable) {
         return (
             <button
                 data-testid={dataTestId}

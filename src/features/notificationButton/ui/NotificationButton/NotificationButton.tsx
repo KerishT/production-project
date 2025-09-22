@@ -36,7 +36,7 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
                     Svg={NotificationIcon}
                     width={18}
                     height={18}
-                    clicable
+                    clickable
                     onClick={onOpenDrawer}
                 />
             )}

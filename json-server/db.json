@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Javascript news СВЕЖАЯ",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.04.2022",
       "userId": "1",
@@ -571,7 +571,7 @@
       },
       "avatar": "https://i.imgur.com/B29b18e.jpeg",
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
         "isArticlesPageWasOpened": true
       }

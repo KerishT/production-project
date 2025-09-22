@@ -32,7 +32,7 @@ export const ThemeSwitcher = memo(({ className } : ThemeSwitcherProps) => {
                 <Icon
                     Svg={SvgIcon}
                     className={classNames(cls.ThemeSwitcher, {}, [className])}
-                    clicable
+                    clickable
                     onClick={onToggleHandler}
                     width={24}
                     height={24}
