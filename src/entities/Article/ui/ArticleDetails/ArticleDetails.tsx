@@ -4,21 +4,21 @@ import { useSelector } from 'react-redux';
 import SvgIcon from '@/shared/assets/icons/svg-icon.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynammicModuleLoader/DynamicModuleLoader';
+import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
 import { Icon as IconDeprecated } from '@/shared/ui/deprecated/Icon';
 import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
-import { Text as TextDeprecated, TextAlign, TextSize } from '@/shared/ui/deprecated/Text';
-import { Text } from '@/shared/ui/redesigned/Text';
+import { TextAlign, Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
+import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from '../../model/selectors/articleDetails';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import { renderArticleBlock } from './lib/renderArticleBlock';
 import cls from './ArticleDetails.module.scss';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { AppImage } from '@/shared/ui/redesigned/AppImage';
-import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
+import { renderArticleBlock } from './lib/renderArticleBlock';
 
 const RedesignedContent = () => {
     const article = useSelector(getArticleDetailsData);
@@ -38,7 +38,7 @@ const RedesignedContent = () => {
 
             <AppImage
                 className={cls.img}
-                fallback={<Skeleton width="100%" height={420} border="16px" />}
+                fallback={<SkeletonRedesigned width="100%" height={420} border="16px" />}
                 src={article?.img}
                 alt={`${t('izobragenie')} ${article?.title}`}
             />
@@ -97,6 +97,24 @@ const DeprecatedContent = () => {
     );
 };
 
+const ArticleDetailsSkeleton = () => {
+    const Skeleton = toggleFeatures({
+        name: 'isAppRedesigned',
+        on: () => SkeletonRedesigned,
+        off: () => SkeletonDeprecated
+    });
+
+    return (
+        <VStack gap="16" max>
+            <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
+            <Skeleton className={cls.title} width={300} height={32} />
+            <Skeleton className={cls.sceleton} width={600} height={24} />
+            <Skeleton className={cls.sceleton} width="100%" height={200} />
+            <Skeleton className={cls.sceleton} width="100%" height={200} />
+        </VStack>
+    );
+};
+
 interface ArticleDetailsProps {
     className?: string,
     id?: string
@@ -123,15 +141,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     let content;
 
     if (isLoading) {
-        content = (
-            <>
-                <SkeletonDeprecated className={cls.avatar} width={200} height={200} border="50%" />
-                <SkeletonDeprecated className={cls.title} width={300} height={32} />
-                <SkeletonDeprecated className={cls.sceleton} width={600} height={24} />
-                <SkeletonDeprecated className={cls.sceleton} width="100%" height={200} />
-                <SkeletonDeprecated className={cls.sceleton} width="100%" height={200} />
-            </>
-        );
+        content = <ArticleDetailsSkeleton />;
     } else if (error) {
         content = (
             <TextDeprecated

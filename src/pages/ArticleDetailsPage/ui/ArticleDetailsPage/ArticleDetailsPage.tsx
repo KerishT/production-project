@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { ArticleDetails } from '@/entities/Article';
 import { ArticleRating } from '@/features/articleRating';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
+import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynammicModuleLoader/DynamicModuleLoader';
 import { ToggleFeatures } from '@/shared/lib/features';
@@ -11,12 +12,11 @@ import { Card } from '@/shared/ui/deprecated/Card';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Page } from '@/widgets/Page';
 import { articleDetailsPageReducer } from '../../model/slice';
+import { AdditionalInfoContainer } from '../AdditionalInfoContainer/AdditionalInfoContainer';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
-import cls from './ArticleDetailsPage.module.scss';
-import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { DetailsContainer } from '../DetailsContainer/DetailsContainer';
-import { AdditionalInfoContainer } from '../AdditionalInfoContainer/AdditionalInfoContainer';
+import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
     className?: string
