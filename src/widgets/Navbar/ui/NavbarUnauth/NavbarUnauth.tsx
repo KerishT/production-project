@@ -1,10 +1,11 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button as ButtonDeprecated, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { LoginModal } from '@/features/AuthByUserName';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './NavbarUnauth.module.scss';
+import { Button } from '@/shared/ui/redesigned/Button';
 
 interface NavbarUnauthProps {
   className?: string,
@@ -27,7 +28,7 @@ export const NavbarUnauth = memo(({
             on={(
                 <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
                     <Button
-                        theme={ButtonTheme.CLEAR_INVERTED}
+                        variant="clear"
                         className={classNames(cls.links)}
                         onClick={onShowModal}
                     >
@@ -44,13 +45,13 @@ export const NavbarUnauth = memo(({
             )}
             off={(
                 <header className={classNames(cls.Navbar, {}, [className])}>
-                    <Button
+                    <ButtonDeprecated
                         theme={ButtonTheme.CLEAR_INVERTED}
                         className={classNames(cls.links)}
                         onClick={onShowModal}
                     >
                         {t('voiti')}
-                    </Button>
+                    </ButtonDeprecated>
 
                     {isAuthModal && (
                         <LoginModal

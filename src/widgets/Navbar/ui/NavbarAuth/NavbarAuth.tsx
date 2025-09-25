@@ -1,9 +1,9 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
+import { AppLink as AppLinkDeprecated, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated, TextTheme } from '@/shared/ui/deprecated/Text';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
 import { getRouteArticleCreate } from '@/shared/const/router';
@@ -27,24 +27,25 @@ export const NavbarAuth = memo(({ className }: NavbarAuthProps) => {
                         className={cls.actions}
                     >
                         <NotificationButton />
+
                         <AvatarDropdown />
                     </HStack>
                 </header>
             )}
             off={(
                 <header className={classNames(cls.Navbar, {}, [className])}>
-                    <Text
+                    <TextDeprecated
                         className={cls.appName}
                         title={t('Ulbi TV App')}
                         theme={TextTheme.INVERTED}
                     />
 
-                    <AppLink
+                    <AppLinkDeprecated
                         to={getRouteArticleCreate()}
                         theme={AppLinkTheme.SECONDARY}
                     >
                         {t('Create article')}
-                    </AppLink>
+                    </AppLinkDeprecated>
 
                     <HStack
                         gap="16"
