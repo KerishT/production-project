@@ -19,6 +19,7 @@ import { loginByUserName } from '../../model/services/loginByUserName/loginByUse
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 import { VStack } from '@/shared/ui/redesigned/Stack';
+import { useForceUpdate } from '@/shared/lib/render/forceUpdate';
 
 export interface LoginFormProps {
     className?: string,
@@ -37,6 +38,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);
+    const forceUpdate = useForceUpdate();
 
     const onChangeUsername = useCallback((value: string) => {
         dispath(loginActions.setUsername(value));
@@ -51,8 +53,10 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 
         if (result.meta.requestStatus === 'fulfilled') {
             onSuccess();
+
+            forceUpdate();
         }
-    }, [dispath, username, password, onSuccess]);
+    }, [dispath, username, password, onSuccess, forceUpdate]);
 
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
